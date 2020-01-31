@@ -1,0 +1,92 @@
+---
+name: LIS2DH12
+category: Device
+description: Optical Time of Flight distance sensor 
+datasheet: http://www.st.com/content/ccc/resource/technical/document/datasheet/12/c0/5c/36/b9/58/46/f2/DM00091513.pdf/files/DM00091513.pdf/jcr:content/translations/en.DM00091513.pdf
+mfg: STMicroelectronics
+mfg_pn: LIS2DH12TR
+digikey_pn: 497-14851-1-ND
+
+prefix: lis
+bus: I2C,SPI
+i2c_addr: 0x52
+
+###########################################################################################################
+#                                   REGISTERS                                                             #
+###########################################################################################################
+
+registers:
+  - STATUS_AUX:     { addr: 0x07 , type: uint8_t , perm: r  , desc: n/a }
+  - OUT_TEMP:        { addr: 0x0C , type: uint16_t , perm: r  , desc: Temperature sensor data }
+  - WHO_AM_I:        { addr: 0x0F , type: uint8_t , perm: r  , desc: Device identification register , default: 0b00110011}
+  - CTRL0:          { addr: 0x1E , type: uint8_t , perm: rw , desc: Control Register 0 }
+  - TEMP_CFG:        { addr: 0x1F , type: uint8_t , perm: rw , desc: n/a , default: 0b00010000}
+  - CTRL1:          { addr: 0x20 , type: uint8_t , perm: rw , desc: Control Register 1 }
+  - CTRL2:          { addr: 0x21 , type: uint8_t , perm: rw , desc: Control Register 2 , default: 0b00000111}
+  - CTRL3:          { addr: 0x22 , type: uint8_t , perm: rw , desc: Control Register 3 }
+  - CTRL4:          { addr: 0x23 , type: uint8_t , perm: rw , desc: Control Register 4 }
+  - CTRL5:          { addr: 0x24 , type: uint8_t , perm: rw , desc: Control Register 5 }
+  - CTRL6:          { addr: 0x25 , type: uint8_t , perm: rw , desc: Control Register 6 }
+  - REFERENCE:      { addr: 0x26 , type: uint8_t , perm: rw , desc: Reference value for interrupt generation }
+  - STATUS:          { addr: 0x27 , type: uint8_t , perm: r  , desc: n/a }
+  - OUT_X:          { addr: 0x28 , type: uint16_t , perm: r  , desc: X-axis acceleration data }
+  - OUT_Y:          { addr: 0x2A , type: uint16_t , perm: r  , desc: Y-axis acceleration data }
+  - OUT_Z:          { addr: 0x2C , type: uint16_t , perm: r  , desc: Z-axis acceleration data }
+  - FIFO_CTRL:      { addr: 0x2E , type: uint8_t , perm: rw , desc: Fifo Control register }
+  - FIFO_SRC:        { addr: 0x2F , type: uint8_t , perm: r  , desc: Fifo status register }
+  - INT1_CFG:        { addr: 0x30 , type: uint8_t , perm: rw , desc: Interrupt 1 config register}
+  - INT1_SRC:        { addr: 0x31 , type: uint8_t , perm: r  , desc: Interrupt 1 source register }
+  - INT1_THS:        { addr: 0x32 , type: uint8_t , perm: rw , desc: Interrupt 1 threshold register }
+  - INT1_DURATION:  { addr: 0x33 , type: uint8_t , perm: rw , desc: Interrupt 1 duration register }
+  - INT2_CFG:        { addr: 0x34 , type: uint8_t , perm: rw , desc: Interrupt 2 config register }
+  - INT2_SRC:        { addr: 0x35 , type: uint8_t , perm: r  , desc: Interrupt 2 source register }
+  - INT2_THS:        { addr: 0x36 , type: uint8_t , perm: rw , desc: Interrupt 2 threshold register  }
+  - INT2_DURATION:  { addr: 0x37 , type: uint8_t , perm: rw , desc: Interrupt 2 duration register }
+  - CLICK_CFG:      { addr: 0x38 , type: uint8_t , perm: rw , desc: Click config }
+  - CLICK_SRC:      { addr: 0x39 , type: uint8_t , perm: r  , desc: Click source }
+  - CLICK_THS:      { addr: 0x3A , type: uint8_t , perm: rw , desc: Click Threshold }
+  - TIME_LIMIT:      { addr: 0x3B , type: uint8_t , perm: rw , desc: Click time limit }
+  - TIME_LATENCY:    { addr: 0x3C , type: uint8_t , perm: rw , desc: Click time latency }
+  - TIME_WINDOW:    { addr: 0x3D , type: uint8_t , perm: rw , desc: Click time window }
+  - ACT_THS:        { addr: 0x3E , type: uint8_t , perm: rw , desc: Activity threshold }
+  - ACT_DUR:        { addr: 0x3F , type: uint8_t , perm: rw , desc: Activity duration }
+
+###########################################################################################################
+#                                   VALUES                                                                #
+###########################################################################################################
+values:
+  - CTRL1:
+      flags:
+        - X_EN: {mask: 0x01, desc: X-axis enable}
+        - Y_EN: {mask: 0x02, desc: Y-axis enable}
+        - Z_EN: {mask: 0x04, desc: Z-axis enable}
+        - LOW_PWR: {mask: 0x08, desc: Low-power mode enable}
+      fields:
+        - ODR:
+            mask: 0xF0
+            desc: Data rate selection
+            vals:
+              - OFF:   {val: 0b0000, desc: Power-down mode}
+              - 1Hz:   {val: 0b0001, desc: HR/ Normal / Low-power mode (1 Hz)  }
+              - 10Hz:  {val: 0b0010, desc: HR/ Normal / Low-power mode (10 Hz)  }
+              - 25Hz:  {val: 0b0011, desc: HR/ Normal / Low-power mode (25 Hz)  }
+              - 50Hz:  {val: 0b0100, desc: HR/ Normal / Low-power mode (50 Hz)  }
+              - 100Hz: {val: 0b0101, desc: HR/ Normal / Low-power mode (100 Hz) }
+              - 200Hz: {val: 0b0110, desc: HR/ Normal / Low-power mode (200 Hz) }
+              - 400Hz: {val: 0b0111, desc: HR/ Normal / Low-power mode (400 Hz) }
+              - 1620Hz: {val: 0b0111, desc: Low-power mode (1.620 kHz)}
+              - 5376Hz: {val: 0b0111, desc: HR/ Normal (1.344 kHz) / Low-power mode (5.376 kHz)}
+  
+  - CTRL2:
+      flags:
+        - HP_IA1: {mask: 0x01, desc: High-pass filter enabled for AOI function on Interrupt 1}
+        - HP_IA2: {mask: 0x02, desc: High-pass filter enabled for AOI function on Interrupt 2}
+        - HPCLICK: {mask: 0x04, desc: High-pass filter enabled for Click function}
+        - FDS: {mask: 0x08, desc: Filtered data selection, data from internal filter sent to output register and FIFO }
+
+
+
+tests:
+  - WHO_AM_I: {val: 0b00110011}
+    
+    
