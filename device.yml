@@ -66,14 +66,14 @@ values:
             mask: 0xF0
             desc: Data rate selection
             vals:
-              - OFF:   {val: 0b0000, desc: Power-down mode}
-              - 1Hz:   {val: 0b0001, desc: HR/ Normal / Low-power mode (1 Hz)  }
-              - 10Hz:  {val: 0b0010, desc: HR/ Normal / Low-power mode (10 Hz)  }
-              - 25Hz:  {val: 0b0011, desc: HR/ Normal / Low-power mode (25 Hz)  }
-              - 50Hz:  {val: 0b0100, desc: HR/ Normal / Low-power mode (50 Hz)  }
-              - 100Hz: {val: 0b0101, desc: HR/ Normal / Low-power mode (100 Hz) }
-              - 200Hz: {val: 0b0110, desc: HR/ Normal / Low-power mode (200 Hz) }
-              - 400Hz: {val: 0b0111, desc: HR/ Normal / Low-power mode (400 Hz) }
+              - PWR_DWN:   {val: 00000, desc: Power-down mode}
+              - 1Hz:   {val: 00001, desc: HR/ Normal / Low-power mode (1 Hz)  }
+              - 10Hz:  {val: 00010, desc: HR/ Normal / Low-power mode (10 Hz)  }
+              - 25Hz:  {val: 00011, desc: HR/ Normal / Low-power mode (25 Hz)  }
+              - 50Hz:  {val: 00100, desc: HR/ Normal / Low-power mode (50 Hz)  }
+              - 100Hz: {val: 00101, desc: HR/ Normal / Low-power mode (100 Hz) }
+              - 200Hz: {val: 00110, desc: HR/ Normal / Low-power mode (200 Hz) }
+              - 400Hz: {val: 00111, desc: HR/ Normal / Low-power mode (400 Hz) }
               - 1620Hz: {val: 0b0111, desc: Low-power mode (1.620 kHz)}
               - 5376Hz: {val: 0b0111, desc: HR/ Normal (1.344 kHz) / Low-power mode (5.376 kHz)}
   
