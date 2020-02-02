@@ -54,39 +54,31 @@ registers:
 ###########################################################################################################
 #                                   VALUES                                                                #
 ###########################################################################################################
-values:
+fields:
   - CTRL1:
-      flags:
-        - X_EN: {mask: 0x01, desc: X-axis enable}
-        - Y_EN: {mask: 0x02, desc: Y-axis enable}
-        - Z_EN: {mask: 0x04, desc: Z-axis enable}
-        - LOW_PWR: {mask: 0x08, desc: Low-power mode enable}
-      fields:
-        - ODR:
-            mask: 0xF0
-            desc: Data rate selection
-            vals:
-              - PWR_DWN:   {val: 00000, desc: Power-down mode}
-              - 1Hz:   {val: 00001, desc: HR/ Normal / Low-power mode (1 Hz)  }
-              - 10Hz:  {val: 00010, desc: HR/ Normal / Low-power mode (10 Hz)  }
-              - 25Hz:  {val: 00011, desc: HR/ Normal / Low-power mode (25 Hz)  }
-              - 50Hz:  {val: 00100, desc: HR/ Normal / Low-power mode (50 Hz)  }
-              - 100Hz: {val: 00101, desc: HR/ Normal / Low-power mode (100 Hz) }
-              - 200Hz: {val: 00110, desc: HR/ Normal / Low-power mode (200 Hz) }
-              - 400Hz: {val: 00111, desc: HR/ Normal / Low-power mode (400 Hz) }
-              - 1620Hz: {val: 0b0111, desc: Low-power mode (1.620 kHz)}
-              - 5376Hz: {val: 0b0111, desc: HR/ Normal (1.344 kHz) / Low-power mode (5.376 kHz)}
+    - X_EN: {mask: 0x01, desc: X-axis enable}
+    - Y_EN: {mask: 0x02, desc: Y-axis enable}
+    - Z_EN: {mask: 0x04, desc: Z-axis enable}
+    - LOW_PWR: {mask: 0x08, desc: Low-power mode enable}
+    - ODR:
+        mask: 0xF0
+        desc: Data rate selection
+        vals:
+          - PWR_DWN:   {val: 00000, desc: Power-down mode}
+          - 1Hz:   {val: 00001, desc: HR/ Normal / Low-power mode (1 Hz)  }
+          - 10Hz:  {val: 00010, desc: HR/ Normal / Low-power mode (10 Hz)  }
+          - 25Hz:  {val: 00011, desc: HR/ Normal / Low-power mode (25 Hz)  }
+          - 50Hz:  {val: 00100, desc: HR/ Normal / Low-power mode (50 Hz)  }
+          - 100Hz: {val: 00101, desc: HR/ Normal / Low-power mode (100 Hz) }
+          - 200Hz: {val: 00110, desc: HR/ Normal / Low-power mode (200 Hz) }
+          - 400Hz: {val: 00111, desc: HR/ Normal / Low-power mode (400 Hz) }
+          - 1620Hz: {val: 0b0111, desc: Low-power mode (1.620 kHz)}
+          - 5376Hz: {val: 0b0111, desc: HR/ Normal (1.344 kHz) / Low-power mode (5.376 kHz)}
   
   - CTRL2:
-      flags:
-        - HP_IA1: {mask: 0x01, desc: High-pass filter enabled for AOI function on Interrupt 1}
-        - HP_IA2: {mask: 0x02, desc: High-pass filter enabled for AOI function on Interrupt 2}
-        - HPCLICK: {mask: 0x04, desc: High-pass filter enabled for Click function}
-        - FDS: {mask: 0x08, desc: Filtered data selection, data from internal filter sent to output register and FIFO }
+    - HP_IA1: {mask: 0x01, desc: High-pass filter enabled for AOI function on Interrupt 1}
+    - HP_IA2: {mask: 0x02, desc: High-pass filter enabled for AOI function on Interrupt 2}
+    - HPCLICK: {mask: 0x04, desc: High-pass filter enabled for Click function}
+    - FDS: {mask: 0x08, desc: Filtered data selection, data from internal filter sent to output register and FIFO }
 
-
-
-tests:
-  - WHO_AM_I: {val: 0b00110011}
-    
     

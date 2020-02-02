@@ -50,39 +50,33 @@
 
 
 /*******************************************************************************
-  Flags                                                                              
-*******************************************************************************/
-
-/* CTRL1 Register Flags */
-#define LIS_CTRL1_X_EN                       0x01
-#define LIS_CTRL1_Y_EN                       0x02
-#define LIS_CTRL1_Z_EN                       0x04
-#define LIS_CTRL1_LOW_PWR                       0x08
-
-/* CTRL2 Register Flags */
-#define LIS_CTRL2_HP_IA1                       0x01
-#define LIS_CTRL2_HP_IA2                       0x02
-#define LIS_CTRL2_HPCLICK                       0x04
-#define LIS_CTRL2_FDS                       0x08
-
-
-/*******************************************************************************
-  Field Values                                                                              
+  Fields                                                                              
 *******************************************************************************/
 
 /* CTRL1 Register Fields */
-  /* CTRL1 -> ODR */
-  #define LIS_CTRL1_ODR_MASK        0xF0
-  #define LIS_CTRL1_ODR_PWR_DWN      0x00
-  #define LIS_CTRL1_ODR_1HZ      0x01
-  #define LIS_CTRL1_ODR_10HZ      0x08
-  #define LIS_CTRL1_ODR_25HZ      0x09
-  #define LIS_CTRL1_ODR_50HZ      0x40
-  #define LIS_CTRL1_ODR_100HZ      0x41
-  #define LIS_CTRL1_ODR_200HZ      0x48
-  #define LIS_CTRL1_ODR_400HZ      0x49
-  #define LIS_CTRL1_ODR_1620HZ      0x07
-  #define LIS_CTRL1_ODR_5376HZ      0x07
+    /* CTRL1 -> Flags */
+    #define LIS_CTRL1_X_EN                       0x01
+    #define LIS_CTRL1_Y_EN                       0x02
+    #define LIS_CTRL1_Z_EN                       0x04
+    #define LIS_CTRL1_LOW_PWR                       0x08
+    /* CTRL1 -> ODR */
+    #define LIS_CTRL1_ODR_MASK        0xF0
+    #define LIS_CTRL1_ODR_PWR_DWN      0x00
+    #define LIS_CTRL1_ODR_1HZ      0x01
+    #define LIS_CTRL1_ODR_10HZ      0x08
+    #define LIS_CTRL1_ODR_25HZ      0x09
+    #define LIS_CTRL1_ODR_50HZ      0x40
+    #define LIS_CTRL1_ODR_100HZ      0x41
+    #define LIS_CTRL1_ODR_200HZ      0x48
+    #define LIS_CTRL1_ODR_400HZ      0x49
+    #define LIS_CTRL1_ODR_1620HZ      0x07
+    #define LIS_CTRL1_ODR_5376HZ      0x07
+/* CTRL2 Register Fields */
+    /* CTRL2 -> Flags */
+    #define LIS_CTRL2_HP_IA1                       0x01
+    #define LIS_CTRL2_HP_IA2                       0x02
+    #define LIS_CTRL2_HPCLICK                       0x04
+    #define LIS_CTRL2_FDS                       0x08
 
 /*******************************************************************************
   Default Values                                                                              
