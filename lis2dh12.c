@@ -20,10 +20,10 @@ static mrt_status_t lis_init(lis2dh12_t* dev)
     REG_INIT( dev->mStatusAux , LIS_REG_STATUS_AUX_ADDR , uint8_t, REG_PERM_R , 0x00  );
     REG_INIT( dev->mOutTemp , LIS_REG_OUT_TEMP_ADDR , uint16_t, REG_PERM_R , 0x0000  );
     REG_INIT( dev->mWhoAmI , LIS_REG_WHO_AM_I_ADDR , uint8_t, REG_PERM_R , 0x33  );
-    REG_INIT( dev->mCtrl0 , LIS_REG_CTRL0_ADDR , uint8_t, REG_PERM_RW , 0x00  );
-    REG_INIT( dev->mTempCfg , LIS_REG_TEMP_CFG_ADDR , uint8_t, REG_PERM_RW , 0x10  );
-    REG_INIT( dev->mCtrl1 , LIS_REG_CTRL1_ADDR , uint8_t, REG_PERM_RW , 0x00  );
-    REG_INIT( dev->mCtrl2 , LIS_REG_CTRL2_ADDR , uint8_t, REG_PERM_RW , 0x07  );
+    REG_INIT( dev->mCtrl0 , LIS_REG_CTRL0_ADDR , uint8_t, REG_PERM_RW , 0x10  );
+    REG_INIT( dev->mTempCfg , LIS_REG_TEMP_CFG_ADDR , uint8_t, REG_PERM_RW , 0x07  );
+    REG_INIT( dev->mCtrl1 , LIS_REG_CTRL1_ADDR , uint8_t, REG_PERM_RW , 0x07  );
+    REG_INIT( dev->mCtrl2 , LIS_REG_CTRL2_ADDR , uint8_t, REG_PERM_RW , 0x00  );
     REG_INIT( dev->mCtrl3 , LIS_REG_CTRL3_ADDR , uint8_t, REG_PERM_RW , 0x00  );
     REG_INIT( dev->mCtrl4 , LIS_REG_CTRL4_ADDR , uint8_t, REG_PERM_RW , 0x00  );
     REG_INIT( dev->mCtrl5 , LIS_REG_CTRL5_ADDR , uint8_t, REG_PERM_RW , 0x00  );
@@ -92,7 +92,10 @@ mrt_status_t lis_test(lis2dh12_t* dev)
 {
     mrt_status_t status = MRT_STATUS_ERROR;
     /*user-block-test-start*/
-
+    if(lis_read_reg(dev, &dev->mWhoAmI) == LIS_WHO_AM_I_DEFAULT)
+    {
+        status - MRT_STATUS_OK;
+    }
     /*user-block-test-end*/
     return status;
 }

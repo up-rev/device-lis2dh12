@@ -57,7 +57,7 @@
     <tr>
         <td><a href="#register_status_aux_detail">STATUS_AUX</a></td>
         <td>0x07</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>R</td>
         <td>0x00</td>
         <td>n/a</td>
@@ -65,7 +65,7 @@
     <tr>
         <td><a href="#register_out_temp_detail">OUT_TEMP</a></td>
         <td>0x0C</td>
-        <td>uint16_t</td>
+        <td>uint16</td>
         <td>R</td>
         <td>0x0000</td>
         <td>Temperature sensor data</td>
@@ -73,7 +73,7 @@
     <tr>
         <td><a href="#register_who_am_i_detail">WHO_AM_I</a></td>
         <td>0x0F</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>R</td>
         <td>0x33</td>
         <td>Device identification register</td>
@@ -81,39 +81,39 @@
     <tr>
         <td><a href="#register_ctrl0_detail">CTRL0</a></td>
         <td>0x1E</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
-        <td>0x00</td>
+        <td>0x10</td>
         <td>Control Register 0</td>
     </tr>
     <tr>
         <td><a href="#register_temp_cfg_detail">TEMP_CFG</a></td>
         <td>0x1F</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
-        <td>0x10</td>
+        <td>0x07</td>
         <td>n/a</td>
     </tr>
     <tr>
         <td><a href="#register_ctrl1_detail">CTRL1</a></td>
         <td>0x20</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
-        <td>0x00</td>
+        <td>0x07</td>
         <td>Control Register 1</td>
     </tr>
     <tr>
         <td><a href="#register_ctrl2_detail">CTRL2</a></td>
         <td>0x21</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
-        <td>0x07</td>
+        <td>0x00</td>
         <td>Control Register 2</td>
     </tr>
     <tr>
         <td><a href="#register_ctrl3_detail">CTRL3</a></td>
         <td>0x22</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Control Register 3</td>
@@ -121,7 +121,7 @@
     <tr>
         <td><a href="#register_ctrl4_detail">CTRL4</a></td>
         <td>0x23</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Control Register 4</td>
@@ -129,7 +129,7 @@
     <tr>
         <td><a href="#register_ctrl5_detail">CTRL5</a></td>
         <td>0x24</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Control Register 5</td>
@@ -137,7 +137,7 @@
     <tr>
         <td><a href="#register_ctrl6_detail">CTRL6</a></td>
         <td>0x25</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Control Register 6</td>
@@ -145,7 +145,7 @@
     <tr>
         <td><a href="#register_reference_detail">REFERENCE</a></td>
         <td>0x26</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Reference value for interrupt generation</td>
@@ -153,7 +153,7 @@
     <tr>
         <td><a href="#register_status_detail">STATUS</a></td>
         <td>0x27</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>R</td>
         <td>0x00</td>
         <td>n/a</td>
@@ -161,7 +161,7 @@
     <tr>
         <td><a href="#register_out_x_detail">OUT_X</a></td>
         <td>0x28</td>
-        <td>uint16_t</td>
+        <td>uint16</td>
         <td>R</td>
         <td>0x0000</td>
         <td>X-axis acceleration data</td>
@@ -169,7 +169,7 @@
     <tr>
         <td><a href="#register_out_y_detail">OUT_Y</a></td>
         <td>0x2A</td>
-        <td>uint16_t</td>
+        <td>uint16</td>
         <td>R</td>
         <td>0x0000</td>
         <td>Y-axis acceleration data</td>
@@ -177,7 +177,7 @@
     <tr>
         <td><a href="#register_out_z_detail">OUT_Z</a></td>
         <td>0x2C</td>
-        <td>uint16_t</td>
+        <td>uint16</td>
         <td>R</td>
         <td>0x0000</td>
         <td>Z-axis acceleration data</td>
@@ -185,7 +185,7 @@
     <tr>
         <td><a href="#register_fifo_ctrl_detail">FIFO_CTRL</a></td>
         <td>0x2E</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Fifo Control register</td>
@@ -193,7 +193,7 @@
     <tr>
         <td><a href="#register_fifo_src_detail">FIFO_SRC</a></td>
         <td>0x2F</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>R</td>
         <td>0x00</td>
         <td>Fifo status register</td>
@@ -201,7 +201,7 @@
     <tr>
         <td><a href="#register_int1_cfg_detail">INT1_CFG</a></td>
         <td>0x30</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Interrupt 1 config register</td>
@@ -209,7 +209,7 @@
     <tr>
         <td><a href="#register_int1_src_detail">INT1_SRC</a></td>
         <td>0x31</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>R</td>
         <td>0x00</td>
         <td>Interrupt 1 source register</td>
@@ -217,7 +217,7 @@
     <tr>
         <td><a href="#register_int1_ths_detail">INT1_THS</a></td>
         <td>0x32</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Interrupt 1 threshold register</td>
@@ -225,7 +225,7 @@
     <tr>
         <td><a href="#register_int1_duration_detail">INT1_DURATION</a></td>
         <td>0x33</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Interrupt 1 duration register</td>
@@ -233,7 +233,7 @@
     <tr>
         <td><a href="#register_int2_cfg_detail">INT2_CFG</a></td>
         <td>0x34</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Interrupt 2 config register</td>
@@ -241,7 +241,7 @@
     <tr>
         <td><a href="#register_int2_src_detail">INT2_SRC</a></td>
         <td>0x35</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>R</td>
         <td>0x00</td>
         <td>Interrupt 2 source register</td>
@@ -249,7 +249,7 @@
     <tr>
         <td><a href="#register_int2_ths_detail">INT2_THS</a></td>
         <td>0x36</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Interrupt 2 threshold register</td>
@@ -257,7 +257,7 @@
     <tr>
         <td><a href="#register_int2_duration_detail">INT2_DURATION</a></td>
         <td>0x37</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Interrupt 2 duration register</td>
@@ -265,7 +265,7 @@
     <tr>
         <td><a href="#register_click_cfg_detail">CLICK_CFG</a></td>
         <td>0x38</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Click config</td>
@@ -273,7 +273,7 @@
     <tr>
         <td><a href="#register_click_src_detail">CLICK_SRC</a></td>
         <td>0x39</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>R</td>
         <td>0x00</td>
         <td>Click source</td>
@@ -281,7 +281,7 @@
     <tr>
         <td><a href="#register_click_ths_detail">CLICK_THS</a></td>
         <td>0x3A</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Click Threshold</td>
@@ -289,7 +289,7 @@
     <tr>
         <td><a href="#register_time_limit_detail">TIME_LIMIT</a></td>
         <td>0x3B</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Click time limit</td>
@@ -297,7 +297,7 @@
     <tr>
         <td><a href="#register_time_latency_detail">TIME_LATENCY</a></td>
         <td>0x3C</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Click time latency</td>
@@ -305,7 +305,7 @@
     <tr>
         <td><a href="#register_time_window_detail">TIME_WINDOW</a></td>
         <td>0x3D</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Click time window</td>
@@ -313,7 +313,7 @@
     <tr>
         <td><a href="#register_act_ths_detail">ACT_THS</a></td>
         <td>0x3E</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Activity threshold</td>
@@ -321,7 +321,7 @@
     <tr>
         <td><a href="#register_act_dur_detail">ACT_DUR</a></td>
         <td>0x3F</td>
-        <td>uint8_t</td>
+        <td>uint8</td>
         <td>RW</td>
         <td>0x00</td>
         <td>Activity duration</td>
@@ -462,6 +462,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x1E]</b></li>
+    <li class="note">  Default: <b>[0x10]</b></li>
 </ul>
 
 <p>Control Register 0</p>
@@ -482,11 +483,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">CTRL0</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="one" >1</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>CTRL0:</b> Control Register 0
 
 
 <div id="register_temp_cfg_detail" class="packet">
@@ -494,7 +510,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x1F]</b></li>
-    <li class="note">  Default: <b>[0x10]</b></li>
+    <li class="note">  Default: <b>[0x07]</b></li>
 </ul>
 
 <p>n/a</p>
@@ -523,11 +539,11 @@
       <td class="zero" >0</td>
       <td class="zero" >0</td>
       <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
       <td class="one" >1</td>
-      <td class="zero" >0</td>
-      <td class="zero" >0</td>
-      <td class="zero" >0</td>
-      <td class="zero" >0</td>
+      <td class="one" >1</td>
+      <td class="one" >1</td>
    </tr>
 </table>
 
@@ -542,6 +558,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x20]</b></li>
+    <li class="note">  Default: <b>[0x07]</b></li>
 </ul>
 
 <p>Control Register 1</p>
@@ -569,6 +586,17 @@
 <td class="field" colspan="1">X_EN</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="one" >1</td>
+      <td class="one" >1</td>
+      <td class="one" >1</td>
+   </tr>
 </table>
 
 <h2> Flags:</h2>
@@ -600,7 +628,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x21]</b></li>
-    <li class="note">  Default: <b>[0x07]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Control Register 2</p>
@@ -635,9 +663,9 @@
       <td class="zero" >0</td>
       <td class="zero" >0</td>
       <td class="zero" >0</td>
-      <td class="one" >1</td>
-      <td class="one" >1</td>
-      <td class="one" >1</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
    </tr>
 </table>
 
@@ -653,6 +681,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x22]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Control Register 3</p>
@@ -673,11 +702,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">CTRL3</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>CTRL3:</b> Control Register 3
 
 
 <div id="register_ctrl4_detail" class="packet">
@@ -685,6 +729,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x23]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Control Register 4</p>
@@ -705,11 +750,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">CTRL4</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>CTRL4:</b> Control Register 4
 
 
 <div id="register_ctrl5_detail" class="packet">
@@ -717,6 +777,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x24]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Control Register 5</p>
@@ -737,11 +798,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">CTRL5</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>CTRL5:</b> Control Register 5
 
 
 <div id="register_ctrl6_detail" class="packet">
@@ -749,6 +825,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x25]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Control Register 6</p>
@@ -769,11 +846,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">CTRL6</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>CTRL6:</b> Control Register 6
 
 
 <div id="register_reference_detail" class="packet">
@@ -781,6 +873,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x26]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Reference value for interrupt generation</p>
@@ -801,11 +894,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">REFERENCE</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>REFERENCE:</b> Reference value for interrupt generation
 
 
 <div id="register_status_detail" class="packet">
@@ -965,6 +1073,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x2E]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Fifo Control register</p>
@@ -985,11 +1094,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">FIFO_CTRL</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>FIFO_CTRL:</b> Fifo Control register
 
 
 <div id="register_fifo_src_detail" class="packet">
@@ -1029,6 +1153,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x30]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Interrupt 1 config register</p>
@@ -1049,11 +1174,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">INT1_CFG</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>INT1_CFG:</b> Interrupt 1 config register
 
 
 <div id="register_int1_src_detail" class="packet">
@@ -1093,6 +1233,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x32]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Interrupt 1 threshold register</p>
@@ -1113,11 +1254,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">INT1_THS</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>INT1_THS:</b> Interrupt 1 threshold register
 
 
 <div id="register_int1_duration_detail" class="packet">
@@ -1125,6 +1281,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x33]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Interrupt 1 duration register</p>
@@ -1145,11 +1302,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">INT1_DURATION</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>INT1_DURATION:</b> Interrupt 1 duration register
 
 
 <div id="register_int2_cfg_detail" class="packet">
@@ -1157,6 +1329,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x34]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Interrupt 2 config register</p>
@@ -1177,11 +1350,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">INT2_CFG</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>INT2_CFG:</b> Interrupt 2 config register
 
 
 <div id="register_int2_src_detail" class="packet">
@@ -1221,6 +1409,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x36]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Interrupt 2 threshold register</p>
@@ -1241,11 +1430,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">INT2_THS</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>INT2_THS:</b> Interrupt 2 threshold register
 
 
 <div id="register_int2_duration_detail" class="packet">
@@ -1253,6 +1457,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x37]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Interrupt 2 duration register</p>
@@ -1273,11 +1478,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">INT2_DURATION</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>INT2_DURATION:</b> Interrupt 2 duration register
 
 
 <div id="register_click_cfg_detail" class="packet">
@@ -1285,6 +1505,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x38]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Click config</p>
@@ -1305,11 +1526,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">CLICK_CFG</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>CLICK_CFG:</b> Click config
 
 
 <div id="register_click_src_detail" class="packet">
@@ -1349,6 +1585,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x3A]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Click Threshold</p>
@@ -1369,11 +1606,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">CLICK_THS</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>CLICK_THS:</b> Click Threshold
 
 
 <div id="register_time_limit_detail" class="packet">
@@ -1381,6 +1633,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x3B]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Click time limit</p>
@@ -1401,11 +1654,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">TIME_LIMIT</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>TIME_LIMIT:</b> Click time limit
 
 
 <div id="register_time_latency_detail" class="packet">
@@ -1413,6 +1681,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x3C]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Click time latency</p>
@@ -1433,11 +1702,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">TIME_LATENCY</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>TIME_LATENCY:</b> Click time latency
 
 
 <div id="register_time_window_detail" class="packet">
@@ -1445,6 +1729,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x3D]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Click time window</p>
@@ -1465,11 +1750,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">TIME_WINDOW</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>TIME_WINDOW:</b> Click time window
 
 
 <div id="register_act_ths_detail" class="packet">
@@ -1477,6 +1777,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x3E]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Activity threshold</p>
@@ -1497,11 +1798,26 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">ACT_THS</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>ACT_THS:</b> Activity threshold
 
 
 <div id="register_act_dur_detail" class="packet">
@@ -1509,6 +1825,7 @@
 <hr/>
 <ul>
     <li class="note">  Address: <b>[0x3F]</b></li>
+    <li class="note">  Default: <b>[0x00]</b></li>
 </ul>
 
 <p>Activity duration</p>
@@ -1529,9 +1846,24 @@
   </tr>
   <tr>
     <th class="smallCell">Field</th>
-   <td class="empty" colspan="8"></td>
+   <td class="field" colspan="8">ACT_DUR</td>
 
   </tr>
+  <tr>
+    <th class="smallCell">Default</th>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+      <td class="zero" >0</td>
+   </tr>
 </table>
 
+
+<h2> Fields:</h2>
+
+<b>ACT_DUR:</b> Activity duration
 

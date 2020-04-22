@@ -16,41 +16,41 @@ i2c_addr: 0x32
 ###########################################################################################################
 
 registers:
-  - STATUS_AUX:     { addr: 0x07 , type: uint8_t , perm: r  , desc: n/a }
-  - OUT_TEMP:        { addr: 0x0C , type: uint16_t , perm: r  , desc: Temperature sensor data }
-  - WHO_AM_I:        { addr: 0x0F , type: uint8_t , perm: r  , desc: Device identification register , default: 0b00110011}
-  - CTRL0:          { addr: 0x1E , type: uint8_t , perm: rw , desc: Control Register 0 }
-  - TEMP_CFG:        { addr: 0x1F , type: uint8_t , perm: rw , desc: n/a , default: 0b00010000}
-  - CTRL1:          { addr: 0x20 , type: uint8_t , perm: rw , desc: Control Register 1 }
-  - CTRL2:          { addr: 0x21 , type: uint8_t , perm: rw , desc: Control Register 2 , default: 0b00000111}
-  - CTRL3:          { addr: 0x22 , type: uint8_t , perm: rw , desc: Control Register 3 }
-  - CTRL4:          { addr: 0x23 , type: uint8_t , perm: rw , desc: Control Register 4 }
-  - CTRL5:          { addr: 0x24 , type: uint8_t , perm: rw , desc: Control Register 5 }
-  - CTRL6:          { addr: 0x25 , type: uint8_t , perm: rw , desc: Control Register 6 }
-  - REFERENCE:      { addr: 0x26 , type: uint8_t , perm: rw , desc: Reference value for interrupt generation }
-  - STATUS:          { addr: 0x27 , type: uint8_t , perm: r  , desc: n/a }
-  - OUT_X:          { addr: 0x28 , type: uint16_t , perm: r  , desc: X-axis acceleration data }
-  - OUT_Y:          { addr: 0x2A , type: uint16_t , perm: r  , desc: Y-axis acceleration data }
-  - OUT_Z:          { addr: 0x2C , type: uint16_t , perm: r  , desc: Z-axis acceleration data }
-  - FIFO_CTRL:      { addr: 0x2E , type: uint8_t , perm: rw , desc: Fifo Control register }
-  - FIFO_SRC:        { addr: 0x2F , type: uint8_t , perm: r  , desc: Fifo status register }
-  - INT1_CFG:        { addr: 0x30 , type: uint8_t , perm: rw , desc: Interrupt 1 config register}
-  - INT1_SRC:        { addr: 0x31 , type: uint8_t , perm: r  , desc: Interrupt 1 source register }
-  - INT1_THS:        { addr: 0x32 , type: uint8_t , perm: rw , desc: Interrupt 1 threshold register }
-  - INT1_DURATION:  { addr: 0x33 , type: uint8_t , perm: rw , desc: Interrupt 1 duration register }
-  - INT2_CFG:        { addr: 0x34 , type: uint8_t , perm: rw , desc: Interrupt 2 config register }
-  - INT2_SRC:        { addr: 0x35 , type: uint8_t , perm: r  , desc: Interrupt 2 source register }
-  - INT2_THS:        { addr: 0x36 , type: uint8_t , perm: rw , desc: Interrupt 2 threshold register  }
-  - INT2_DURATION:  { addr: 0x37 , type: uint8_t , perm: rw , desc: Interrupt 2 duration register }
-  - CLICK_CFG:      { addr: 0x38 , type: uint8_t , perm: rw , desc: Click config }
-  - CLICK_SRC:      { addr: 0x39 , type: uint8_t , perm: r  , desc: Click source }
-  - CLICK_THS:      { addr: 0x3A , type: uint8_t , perm: rw , desc: Click Threshold }
-  - TIME_LIMIT:      { addr: 0x3B , type: uint8_t , perm: rw , desc: Click time limit }
-  - TIME_LATENCY:    { addr: 0x3C , type: uint8_t , perm: rw , desc: Click time latency }
-  - TIME_WINDOW:    { addr: 0x3D , type: uint8_t , perm: rw , desc: Click time window }
-  - ACT_THS:        { addr: 0x3E , type: uint8_t , perm: rw , desc: Activity threshold }
-  - ACT_DUR:        { addr: 0x3F , type: uint8_t , perm: rw , desc: Activity duration }
-
+  - STATUS_AUX:       { addr: 0x07 , type: uint8_t , perm: r  ,                desc: n/a }
+  - OUT_TEMP:         { addr: 0x0C , type: uint16_t , perm: r ,                desc: Temperature sensor data }
+  - WHO_AM_I:         { addr: 0x0F , type: uint8_t , perm: r  , default: 0x33, desc: Device identification register }
+  - CTRL0:            { addr: 0x1E , type: uint8_t , perm: rw , default: 0x10, desc: Control Register 0  }
+  - TEMP_CFG:         { addr: 0x1F , type: uint8_t , perm: rw , default: 0x07, desc: n/a }
+  - CTRL1:            { addr: 0x20 , type: uint8_t , perm: rw , default: 0x07, desc: Control Register 1 }
+  - CTRL2:            { addr: 0x21 , type: uint8_t , perm: rw , default: 0x00, desc: Control Register 2 }
+  - CTRL3:            { addr: 0x22 , type: uint8_t , perm: rw , default: 0x00, desc: Control Register 3 }
+  - CTRL4:            { addr: 0x23 , type: uint8_t , perm: rw , default: 0x00, desc: Control Register 4 }
+  - CTRL5:            { addr: 0x24 , type: uint8_t , perm: rw , default: 0x00, desc: Control Register 5 }
+  - CTRL6:            { addr: 0x25 , type: uint8_t , perm: rw , default: 0x00, desc: Control Register 6 }
+  - REFERENCE:        { addr: 0x26 , type: uint8_t , perm: rw , default: 0x00, desc: Reference value for interrupt generation }
+  - STATUS:           { addr: 0x27 , type: uint8_t , perm: r  ,                desc: n/a }
+  - OUT_X:            { addr: 0x28 , type: uint16_t , perm: r ,                desc: X-axis acceleration data }
+  - OUT_Y:            { addr: 0x2A , type: uint16_t , perm: r ,                desc: Y-axis acceleration data }
+  - OUT_Z:            { addr: 0x2C , type: uint16_t , perm: r ,                desc: Z-axis acceleration data }
+  - FIFO_CTRL:        { addr: 0x2E , type: uint8_t , perm: rw , default: 0x00, desc: Fifo Control register }
+  - FIFO_SRC:         { addr: 0x2F , type: uint8_t , perm: r  ,                desc: Fifo status register }
+  - INT1_CFG:         { addr: 0x30 , type: uint8_t , perm: rw , default: 0x00, desc: Interrupt 1 config register}
+  - INT1_SRC:         { addr: 0x31 , type: uint8_t , perm: r  ,                desc: Interrupt 1 source register }
+  - INT1_THS:         { addr: 0x32 , type: uint8_t , perm: rw , default: 0x00, desc: Interrupt 1 threshold register }
+  - INT1_DURATION:    { addr: 0x33 , type: uint8_t , perm: rw , default: 0x00, desc: Interrupt 1 duration register }
+  - INT2_CFG:         { addr: 0x34 , type: uint8_t , perm: rw , default: 0x00, desc: Interrupt 2 config register }
+  - INT2_SRC:         { addr: 0x35 , type: uint8_t , perm: r  ,                desc: Interrupt 2 source register }
+  - INT2_THS:         { addr: 0x36 , type: uint8_t , perm: rw , default: 0x00, desc: Interrupt 2 threshold register  }
+  - INT2_DURATION:    { addr: 0x37 , type: uint8_t , perm: rw , default: 0x00, desc: Interrupt 2 duration register }
+  - CLICK_CFG:        { addr: 0x38 , type: uint8_t , perm: rw , default: 0x00, desc: Click config }
+  - CLICK_SRC:        { addr: 0x39 , type: uint8_t , perm: r  ,                desc: Click source }
+  - CLICK_THS:        { addr: 0x3A , type: uint8_t , perm: rw , default: 0x00, desc: Click Threshold }
+  - TIME_LIMIT:       { addr: 0x3B , type: uint8_t , perm: rw , default: 0x00, desc: Click time limit }
+  - TIME_LATENCY:     { addr: 0x3C , type: uint8_t , perm: rw , default: 0x00, desc: Click time latency }
+  - TIME_WINDOW:      { addr: 0x3D , type: uint8_t , perm: rw , default: 0x00, desc: Click time window }
+  - ACT_THS:          { addr: 0x3E , type: uint8_t , perm: rw , default: 0x00, desc: Activity threshold }
+  - ACT_DUR:          { addr: 0x3F , type: uint8_t , perm: rw , default: 0x00, desc: Activity duration }
+        
 ###########################################################################################################
 #                                   VALUES                                                                #
 ###########################################################################################################
@@ -80,5 +80,8 @@ fields:
     - HP_IA2: {mask: 0x02, desc: High-pass filter enabled for AOI function on Interrupt 2}
     - HPCLICK: {mask: 0x04, desc: High-pass filter enabled for Click function}
     - FDS: {mask: 0x08, desc: Filtered data selection, data from internal filter sent to output register and FIFO }
+
+  - INT1_CFG: 
+    - 
 
     
