@@ -6,7 +6,7 @@
   * 
   */
 
-#define LIS2DH12_I2C_ADDRESS 0x52
+#define LIS2DH12_I2C_ADDRESS 0x32
 #define LIS2DH12_REG_ADDR_SIZE 1
 
 
