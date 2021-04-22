@@ -81,7 +81,6 @@ fields:
     - HPCLICK: {mask: 0x04, desc: High-pass filter enabled for Click function}
     - FDS: {mask: 0x08, desc: Filtered data selection, data from internal filter sent to output register and FIFO }
 
-  - INT1_CFG: 
-    - 
+
 
     
